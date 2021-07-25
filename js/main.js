@@ -66,12 +66,34 @@ function numberSearchArr(arr) {
 function palindrome(str) {
     let strRever = str.split('').reverse().join('').toLowerCase();
     str = str.toLowerCase();
-    if (str == strRever) {
+    /* if (str == strRever) {
         alert('Является');
     }
-    else alert('Не является');
-    
+    else alert('Не является'); */
+    let res = str == strRever ? 'Является' : 'Не является';
+    alert(res);
+
 }
 //let test = prompt('Введите строку для проверки её на палиндром: ', '');
 //palindrome(test);
 
+function outputOfNumbers() {
+    let arrNum = [];
+    for (let i = 0; i <= num; i++) {
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+            arrNum[i] = ' fizzbuzz ';
+        } else {
+            if (i % 5 == 0) {
+                arrNum[i] = ' buzz ';
+            } else {
+                if (i % 3 == 0) {
+                    arrNum[i] = ' fizz ';
+                } else arrNum[i] = i;
+            }
+        }
+        console.log(arrNum);
+    }
+    alert(arrNum);
+}
+//let num = prompt('Введите целое число n: ', '');
+//outputOfNumbers(num);
