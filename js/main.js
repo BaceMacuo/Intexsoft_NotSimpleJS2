@@ -1,5 +1,7 @@
 const arr = [0, 25, -1, 99, -9, 2];
 let a = null;
+
+//№1
 function sortArr(arr) {
     let choice = prompt(' Имеющийся массив ' + arr + '\n В каком порядке сортируем: \n 1 - Возрастание; \n 2 - Убывание. ', '');
     switch (choice) {
@@ -37,6 +39,7 @@ function sortArr(arr) {
 }
 //sortArr(arr);
 
+//№2
 function numberSearchArr(arr) {
     let choice = prompt(' Имеющийся массив ' + arr + '\n Какое число ищем: \n 1 - Наибольшее; \n 2 - Наименьшее. ', '');
     a = arr[arr.length - 1];
@@ -63,6 +66,7 @@ function numberSearchArr(arr) {
 }
 //numberSearchArr(arr);
 
+//№3
 function palindrome(str) {
     let strRever = str.split('').reverse().join('').toLowerCase();
     str = str.toLowerCase();
@@ -77,7 +81,8 @@ function palindrome(str) {
 //let test = prompt('Введите строку для проверки её на палиндром: ', '');
 //palindrome(test);
 
-function outputOfNumbers() {
+//№4
+function outputOfNumbers(num) {
     let arrNum = [];
     for (let i = 0; i <= num; i++) {
         if ((i % 3 == 0) && (i % 5 == 0)) {
@@ -97,3 +102,26 @@ function outputOfNumbers() {
 }
 //let num = prompt('Введите целое число n: ', '');
 //outputOfNumbers(num);
+
+//№5
+function anagrams(test1, test2) {
+    let punct = ";:.,?!-_—\"'(){} ";
+    let arrPunct = punct.split('');
+    for (let i = 0; i <= test1.length; i++) {
+        for (let j = arrPunct.length; j > 0; j--) {
+            test1 = test1.replace(arrPunct[j], "");
+        }
+    }
+    for (let i = 0; i <= test2.length; i++) {
+        for (let j = arrPunct.length; j > 0; j--) {
+            test2 = test2.replace(arrPunct[j], "");
+        }
+    }
+    test1 = test1.toLowerCase().split('').sort().join('');
+    test2 = test2.toLowerCase().split('').sort().join('');
+    let res = test1 == test2 ? 'Являются' : 'Не являются';
+    alert(res);
+}
+//let test1 = prompt('Введите 1-ую фразу для проверки её на анаграмность: ', '');
+//let test2 = prompt('Введите 2-ую фразу для проверки её на анаграмность: ', '');
+//anagrams(test1, test2);
