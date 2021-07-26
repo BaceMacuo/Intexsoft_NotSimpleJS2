@@ -106,15 +106,15 @@ function outputOfNumbers(num) {
 //№5
 function anagrams(test1, test2) {
     let punct = ";:.,?!-_—\"'(){} ";
-    let arrPunct = punct.split('');
+    punct = punct.split('');
     for (let i = 0; i <= test1.length; i++) {
-        for (let j = arrPunct.length; j > 0; j--) {
-            test1 = test1.replace(arrPunct[j], "");
+        for (let j = punct.length; j > 0; j--) {
+            test1 = test1.replace(punct[j], "");
         }
     }
     for (let i = 0; i <= test2.length; i++) {
-        for (let j = arrPunct.length; j > 0; j--) {
-            test2 = test2.replace(arrPunct[j], "");
+        for (let j = punct.length; j > 0; j--) {
+            test2 = test2.replace(punct[j], "");
         }
     }
     test1 = test1.toLowerCase().split('').sort().join('');
@@ -125,3 +125,19 @@ function anagrams(test1, test2) {
 //let test1 = prompt('Введите 1-ую фразу для проверки её на анаграмность: ', '');
 //let test2 = prompt('Введите 2-ую фразу для проверки её на анаграмность: ', '');
 //anagrams(test1, test2);
+
+//№6
+function vowels(test) {
+    let vowel = "aeiou";
+    vowel = vowel.split('');
+    let sum = null;
+    for(let i = 0; i <= test.length; i++) {
+        for(let j = vowel.length; j > 0; j--) {
+            if(vowel[j] == test[i]) sum++;
+        }
+    }
+    alert(sum);
+}
+//let test = prompt('Введите строку для подсчёта глассных: ', '');
+//vowels(test);
+
