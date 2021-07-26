@@ -131,13 +131,30 @@ function vowels(test) {
     let vowel = "aeiou";
     vowel = vowel.split('');
     let sum = null;
-    for(let i = 0; i <= test.length; i++) {
-        for(let j = vowel.length; j > 0; j--) {
-            if(vowel[j] == test[i]) sum++;
+    for (let i = 0; i <= test.length; i++) {
+        for (let j = vowel.length; j > 0; j--) {
+            if (vowel[j] == test[i]) sum++;
         }
     }
     alert(sum);
 }
 //let test = prompt('Введите строку для подсчёта глассных: ', '');
 //vowels(test);
+
+//№7
+function notRevers(arr) {
+    alert(arr);
+    let a = arr.length - 1;
+    let save = null;
+    for (let i = 0; i < arr.length / 2; i++) {
+        save = arr[a]
+        arr[a] = arr[i];
+        arr[i] = save;
+        a--;
+        console.log(arr);
+
+    }
+    alert(arr);
+}
+//notRevers(arr);
 
