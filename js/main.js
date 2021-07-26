@@ -170,3 +170,16 @@ function arithmeticMean(arr) {
 }
 //arithmeticMean(arr);
 
+//№9
+function inArray(test, arr) {
+    alert(arr);
+    let res = null;
+    for(let i = 0; i < arr.length; i++) {
+        res = arr[i] == test ? true : false;
+        console.log(res);
+        /* if(arr[i] == test) alert(true); */ // если нужен вывод в окно.
+    }
+}
+//let test = prompt('Введите элемент, который хотите найти: ', '');
+//inArray(test, arr);
+
