@@ -158,3 +158,15 @@ function notRevers(arr) {
 }
 //notRevers(arr);
 
+//№8
+function arithmeticMean(arr) {
+    alert(arr);
+    let res = null;
+    for(let i = 0; i < arr.length; i++) {
+        res = res + arr[i];
+        console.log(res);
+    }
+    alert('Среднее арифметическое массива = ' + res / arr.length);
+}
+//arithmeticMean(arr);
+
