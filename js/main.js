@@ -162,7 +162,7 @@ function notRevers(arr) {
 function arithmeticMean(arr) {
     alert(arr);
     let res = null;
-    for(let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         res = res + arr[i];
         console.log(res);
     }
@@ -174,7 +174,7 @@ function arithmeticMean(arr) {
 function inArray(test, arr) {
     alert(arr);
     let res = null;
-    for(let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         res = arr[i] == test ? true : false;
         console.log(res);
         /* if(arr[i] == test) alert(true); */ // если нужен вывод в окно.
@@ -183,19 +183,28 @@ function inArray(test, arr) {
 //let test = prompt('Введите элемент, который хотите найти: ', '');
 //inArray(test, arr);
 
-
+//№10
+function convers(arrTest) {
+    arrTest = arrTest.split('');
+    for (let i = 0; i < arrTest.length; i += 2) {
+        [arrTest[i], arrTest[i + 1]] = [arrTest[i + 1], arrTest[i]];
+    }
+    alert(arrTest.join(''));
+}
+//let arrTest = prompt('Введите элемент, который необходимо преобразовать: ', '');
+//convers(arrTest);
 
 //№11,12
 function dayMonth(day, month) {
     day = day > 0 && day <= 10 ? alert('1 Декада') :
-          day > 10 && day <= 20 ? alert('2 Декада') :
-          day > 20 && day <= 31 ? alert('3 Декада') :
-          alert('Неверная дата!');
+        day > 10 && day <= 20 ? alert('2 Декада') :
+            day > 20 && day <= 31 ? alert('3 Декада') :
+                alert('Неверная дата!');
     month = month > 0 && month <= 3 ? alert('Зима') :
-          month > 3 && month <= 6 ? alert('Весна') :
-          month > 6 && month <= 9 ? alert('Лето') :
-          month > 9 && month <= 12 ? alert('Осень') :
-          alert('Нет такого месяца!');      
+        month > 3 && month <= 6 ? alert('Весна') :
+            month > 6 && month <= 9 ? alert('Лето') :
+                month > 9 && month <= 12 ? alert('Осень') :
+                    alert('Нет такого месяца!');
 }
 //let day = prompt('Введите день: ', '');
 //let month = prompt('Введите месяц: ', '');
