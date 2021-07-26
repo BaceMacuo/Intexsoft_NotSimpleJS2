@@ -183,3 +183,20 @@ function inArray(test, arr) {
 //let test = prompt('Введите элемент, который хотите найти: ', '');
 //inArray(test, arr);
 
+
+
+//№11,12
+function dayMonth(day, month) {
+    day = day > 0 && day <= 10 ? alert('1 Декада') :
+          day > 10 && day <= 20 ? alert('2 Декада') :
+          day > 20 && day <= 31 ? alert('3 Декада') :
+          alert('Неверная дата!');
+    month = month > 0 && month <= 3 ? alert('Зима') :
+          month > 3 && month <= 6 ? alert('Весна') :
+          month > 6 && month <= 9 ? alert('Лето') :
+          month > 9 && month <= 12 ? alert('Осень') :
+          alert('Нет такого месяца!');      
+}
+//let day = prompt('Введите день: ', '');
+//let month = prompt('Введите месяц: ', '');
+//dayMonth(day, month);
